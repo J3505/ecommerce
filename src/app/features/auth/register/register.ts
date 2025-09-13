@@ -8,7 +8,7 @@ import { PasswordModule } from 'primeng/password';
 import { RippleModule } from 'primeng/ripple';
 
 @Component({
-  selector: 'app-auth',
+  selector: 'app-register',
   imports: [
     FormsModule,
     RouterModule,
@@ -16,15 +16,15 @@ import { RippleModule } from 'primeng/ripple';
     CheckboxModule,
     InputTextModule,
     PasswordModule,
-    RippleModule,
+    RippleModule
   ],
-  templateUrl: './auth.html',
-  styleUrl: './auth.css',
+  templateUrl: './register.html',
+  styleUrl: './register.css'
 })
-export class Auth {
+export class Register {
+  name: string = '';
   email: string = '';
-
   password: string = '';
-
   checked: boolean = false;
+
 }
