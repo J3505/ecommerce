@@ -10,8 +10,6 @@ export const routes: Routes = [
     children:[
       { path: '', loadChildren: () => import ('./features/products/products.routes') }
     ]
-
   },
-  // { path: '',component:  },
   { path: '**', redirectTo: '' }
 ];
