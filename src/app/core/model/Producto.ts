@@ -6,4 +6,6 @@ export interface Producto {
   precio: number;
   imagen: string;
   favorito?: boolean;
+  // estado?: boolean;
+  // categoriaId?: number;
 }

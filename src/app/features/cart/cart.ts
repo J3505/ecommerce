@@ -99,7 +99,7 @@ import { CartService } from '@service/cart/cart';
   } @else {
   <div class="text-center py-12 text-gray-500">
     🛍️ Tu carrito está vacío <br />
-    <a routerLink="/menu" class="text-orange-500 hover:underline"> Ver menú </a>
+    <a routerLink="/pagos" class="text-orange-500 hover:underline"> Ver menú </a>
   </div>
   }
 </div>

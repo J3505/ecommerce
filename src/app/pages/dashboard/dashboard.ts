@@ -9,13 +9,9 @@ import { RouterOutlet } from '@angular/router';
   template: `
     <div class="bg-gray-100 font-sans">
       <div class="flex h-screen overflow-hidden">
-        <!-- Header - Fixed at top -->
         <app-navbar (toggleSidebar)="toggleSidebar()"></app-navbar>
-        <!-- Sidebar - Fixed on desktop, slidable on mobile -->
         <app-sidebar [active]="isSidebarActive"></app-sidebar>
-        <!-- Main Content with proper spacing -->
         <div class="content-container flex-1 overflow-auto w-full">
-          <!-- Content -->
           <router-outlet></router-outlet>
         </div>
       </div>

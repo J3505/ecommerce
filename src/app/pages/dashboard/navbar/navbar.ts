@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 
 import { MenubarModule } from 'primeng/menubar';
 import { Dialog } from 'primeng/dialog';
-import { Cart } from "app/features/cart/cart";
+import { Cart } from 'app/features/cart/cart';
 
 @Component({
   selector: 'app-navbar',
@@ -16,16 +16,36 @@ import { Cart } from "app/features/cart/cart";
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
-export class Navbar implements OnInit {
+export class Navbar {
   @Output() toggleSidebar = new EventEmitter<void>();
   cantidad = signal(0);
   visible: boolean = false;
 
-  position: 'left' | 'right' | 'top' | 'bottom' | 'center' | 'topleft' | 'topright' | 'bottomleft' | 'bottomright' = 'center';
+  position:
+    | 'left'
+    | 'right'
+    | 'top'
+    | 'bottom'
+    | 'center'
+    | 'topleft'
+    | 'topright'
+    | 'bottomleft'
+    | 'bottomright' = 'center';
 
-  showDialog(position: 'left' | 'right' | 'top' | 'bottom' | 'center' | 'topleft' | 'topright' | 'bottomleft' | 'bottomright') {
-      this.position = position;
-      this.visible = true;
+  showDialog(
+    position:
+      | 'left'
+      | 'right'
+      | 'top'
+      | 'bottom'
+      | 'center'
+      | 'topleft'
+      | 'topright'
+      | 'bottomleft'
+      | 'bottomright'
+  ) {
+    this.position = position;
+    this.visible = true;
   }
 
   onToggleSidebar() {
@@ -33,34 +53,4 @@ export class Navbar implements OnInit {
   }
 
   items: MenuItem[] = [];
-
-    ngOnInit() {
-        this.items = [
-            {
-                label: 'Projects',
-                icon: 'pi pi-search',
-                badge: '3',
-                items: [
-                    {
-                        label: 'Core',
-                        icon: 'pi pi-bolt',
-                        shortcut: '⌘+S',
-                    },
-                    {
-                        label: 'Blocks',
-                        icon: 'pi pi-server',
-                        shortcut: '⌘+B',
-                    },
-                    {
-                        separator: true,
-                    },
-                    {
-                        label: 'UI Kit',
-                        icon: 'pi pi-pencil',
-                        shortcut: '⌘+U',
-                    },
-                ],
-            },
-        ];
-    }
 }

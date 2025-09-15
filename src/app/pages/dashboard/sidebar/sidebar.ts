@@ -67,13 +67,14 @@ export class Sidebar {
         label: 'Pizzas',
         icon: 'fa-solid fa-pizza-slice',
         command: () => {
-          this.router.navigate(['/dashboard/list']);
+          this.router.navigate(['/dashboard/pizza']);
         },
       },
       {
         label: 'Burgers',
         icon: 'fa-solid fa-burger',
         badge: '8',
+        severity: 'warn',
         command: () => {
           this.router.navigate(['/dashboard/list']);
         },
@@ -82,7 +83,7 @@ export class Sidebar {
         label: 'Piqueo',
         icon: 'fa-solid fa-drumstick-bite',
         command: () => {
-          this.router.navigate(['/dashboard/list']);
+          this.router.navigate(['/dashboard/***']);
         },
       },
       {

@@ -89,7 +89,7 @@ import { RippleModule } from 'primeng/ripple';
               <p-button
                 label="Iniciar sesión"
                 styleClass="w-full"
-                severity="info"
+                severity="warn"
                 routerLink="/dashboard/list"
               ></p-button>
             </div>
